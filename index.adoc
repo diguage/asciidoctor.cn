@@ -12,9 +12,9 @@ ifdef::env-github[:badges:]
 :uri-repo: {uri-org}/asciidoctor
 :uri-asciidoctorj: {uri-org}/asciidoctorj
 :uri-asciidoctorjs: {uri-org}/asciidoctor.js
-:uri-project: http://asciidoctor.org/zh-cn
+:uri-project: http://asciidoctor.org
 ifdef::env-site[:uri-project: link:]
-:uri-docs: {uri-project}/zh-cn/docs
+:uri-docs: {uri-project}/docs
 :uri-news: {uri-project}/news
 :uri-manpage: {uri-project}/man/asciidoctor
 :uri-issues: {uri-repo}/issues
