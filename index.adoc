@@ -12,9 +12,9 @@ ifdef::env-github[:badges:]
 :uri-repo: {uri-org}/asciidoctor
 :uri-asciidoctorj: {uri-org}/asciidoctorj
 :uri-asciidoctorjs: {uri-org}/asciidoctor.js
-:uri-project: http://asciidoctor.org
+:uri-project: http://asciidoctor.org/zh-cn
 ifdef::env-site[:uri-project: link:]
-:uri-docs: {uri-project}/docs
+:uri-docs: {uri-project}/zh-cn/docs
 :uri-news: {uri-project}/news
 :uri-manpage: {uri-project}/man/asciidoctor
 :uri-issues: {uri-repo}/issues
@@ -36,7 +36,7 @@ endif::[]
 :uri-user-manual: {uri-docs}/user-manual
 :uri-install-docker: https://github.com/asciidoctor/docker-asciidoctor
 //:uri-install-doc: {uri-docs}/install-toolchain
-:uri-install-osx-doc: {uri-docs}/install-asciidoctor-osx
+:uri-install-osx-doc: {uri-docs}/install-asciidoctor-macosx
 :uri-render-doc: {uri-docs}/render-documents
 :uri-themes-doc: {uri-docs}/produce-custom-themes-using-asciidoctor-stylesheet-factory
 :uri-gitscm-repo: https://github.com/git/git-scm.com
@@ -48,184 +48,196 @@ endif::[]
 // images:
 :image-uri-screenshot: https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/screenshot.png
 
-{uri-project}/[Asciidoctor] is a _fast_ text processor and publishing toolchain for converting {uri-what-is-asciidoc}[AsciiDoc] content to HTML5, DocBook 5 (or 4.5) and other formats.
-Asciidoctor is written in Ruby, packaged as a RubyGem and published to {uri-rubygem}[RubyGems.org].
-The gem is also included in several Linux distributions, including Fedora, Debian and Ubuntu.
-Asciidoctor is open source, {uri-repo}[hosted on GitHub] and released under {uri-license}[the MIT license].
+{uri-project}/[Asciidoctor] 是一个 _快速的_ 文本处理器和发布工具链，它可以将 {uri-what-is-asciidoc}[AsciiDoc] 文档转化成 HTML5、 DocBook 5 (或 4.5) 以及其他格式。
+Asciidoctor 由 Ruby 编写，打包成 RubyGem，然后发布到 {uri-rubygem}[RubyGems.org] 上。
+这个 gem 还被包含道几个 Linux 发行版中，其中包括 Fedora、Debian 和 Ubuntu。
+Asciidoctor 是开源的， {uri-repo}[代码托管在 GitHub]，并且是以 {uri-license}[MIT 协议]授权。
 
-.Key documentation
+.关键文档
 [.compact]
-* {uri-docs}/what-is-asciidoc[What is Asciidoc?]
-* {uri-docs}/asciidoc-writers-guide[AsciiDoc Writer's Guide]
-* {uri-docs}/asciidoc-syntax-quick-reference[AsciiDoc Syntax Reference]
-* {uri-docs}/user-manual[Asciidoctor User Manual]
+* {uri-docs}/what-is-asciidoc[什么是 Asciidoctor？]
+* {uri-docs}/asciidoc-writers-guide[AsciiDoc 作家指南]
+* {uri-docs}/asciidoc-syntax-quick-reference[AsciiDoc 语法快速参考]
+* {uri-docs}/user-manual[Asciidoctor 用户手册]
 
-.Where Ruby goes, Asciidoctor follows
+.Ruby 所至， Asciidoctor 相随
 ****
-You can run Asciidoctor on the JVM using JRuby.
-To invoke the Asciidoctor API directly from Java and other JVM languages, use {uri-asciidoctorj}[AsciidoctorJ].
-There are plugins available, based on AsciidoctorJ, that integrate the Asciidoctor processor into Apache Maven, Gradle or Javadoc builds.
+使用 JRuby 可以让 Asciidoctor 运行在 Java 虚拟机上。
+使用 {uri-asciidoctorj}[AsciidoctorJ] 就可以让 Java 或者其他 Java 虚拟机语言直接调用 Asciidoctor API。
+基于 AsciidoctorJ 有好多好多插件可用，这些插件可以将 Asciidoctor 整合到 Apache Maven，Gradle 或 Javadoc 构建中。
 
-Asciidoctor also runs in JavaScript.
-We use http://opalrb.org[Opal] to transcompile the Ruby source to JavaScript to produce {uri-asciidoctorjs}[Asciidoctor.js], a fully-functional version of Asciidoctor that works in any JavaScript environment, such as a web browser or Node.js.
-Asciidoctor.js is used to power the AsciiDoc preview extensions for Chrome, Atom, Brackets and other web-based tooling.
+Asciidoctor 也可以运行在 JavaScript 上。
+我们可以使用 http://opalrb.org[Opal] 将 Ruby 源码编译成 JavaScript 并生成 {uri-asciidoctorjs}[Asciidoctor.js]，这是一个全功能版的 Asciidoctor，可以运行在任意的 JavaScript 环境中，比如 Web 浏览器 或 Node.js。
+Asciidoctor.js 被用于 AsciiDoc 预览，支持 Chrome 扩展，Atom，Brackets 或其他基于 Web 的工具。
 ****
 
 ifdef::badges[]
 .*Project health*
-image:https://img.shields.io/travis/asciidoctor/asciidoctor/master.svg[Build Status (Travis CI), link=https://travis-ci.org/asciidoctor/asciidoctor] 
-image:https://ci.appveyor.com/api/projects/status/ifplu67oxvgn6ceq/branch/master?svg=true&amp;passingText=green%20bar&amp;failingText=%23fail&amp;pendingText=building%2E%2E%2E[Build Status (AppVeyor), link=https://ci.appveyor.com/project/asciidoctor/asciidoctor] 
+image:https://img.shields.io/travis/asciidoctor/asciidoctor/master.svg[Build Status (Travis CI), link=https://travis-ci.org/asciidoctor/asciidoctor]
+image:https://ci.appveyor.com/api/projects/status/ifplu67oxvgn6ceq/branch/master?svg=true&amp;passingText=green%20bar&amp;failingText=%23fail&amp;pendingText=building%2E%2E%2E[Build Status (AppVeyor), link=https://ci.appveyor.com/project/asciidoctor/asciidoctor]
 //image:https://img.shields.io/coveralls/asciidoctor/asciidoctor/master.svg[Coverage Status, link=https://coveralls.io/r/asciidoctor/asciidoctor]
 image:https://codeclimate.com/github/asciidoctor/asciidoctor/badges/gpa.svg[Code Climate, link="https://codeclimate.com/github/asciidoctor/asciidoctor"]
 image:https://inch-ci.org/github/asciidoctor/asciidoctor.svg?branch=master[Inline docs, link="https://inch-ci.org/github/asciidoctor/asciidoctor"]
 endif::[]
 
-== The Big Picture
+[[the-big-picture]]
+== 全局概况
 
-Asciidoctor reads content written in plain text, as shown in the panel on the left in the image below, and converts it to HTML5, as shown rendered in the right panel.
-Asciidoctor applies a default stylesheet to the HTML5 document to provide a pleasant out-of-the-box experience.
+Asciidoctor 以纯文本格式读取内容，见下图左边的面板，将它转换成 HTML5 呈现在右侧面板中。
+Asciidoctor 将默认的样式表应用到 HTML5 文档上，提供一个愉快的开箱即用的体验。
 
-image::{image-uri-screenshot}[Preview of AsciiDoc source and corresponding rendered HTML]
+image::{image-uri-screenshot}[AsciiDoc 源文预览和相应的 HTML 渲染]
 
+[[asciidoc-processing]]
 == AsciiDoc Processing
 
-Asciidoctor reads and parses text written in the AsciiDoc syntax, then feeds the parse tree to a set of built-in converters to produce HTML5, DocBook 5 (or 4.5) or man(ual) page output.
-You have the option of using your own converter or loading {uri-tilt}[Tilt]-supported templates to customize the generated output or produce additional formats.
+Asciidoctor 读取并处理以 AsciiDoc 语法写作的文件，然后然后将解析出来的解析树交给内置的转化器生成 HTML5，DocBook 5 (或 4.5) 或帮助手册页面输出。
+你可以选择使用你自己的转化器或者加载 {uri-tilt}[Tilt] - 支持通过模板来自定义输出或产生附加的格式。
 
-NOTE: Asciidoctor is a drop-in replacement for the original AsciiDoc Python processor (`asciidoc.py`).
-The Asciidoctor test suite has {uri-tests}[> 1,600 tests] to ensure compatibility with the AsciiDoc syntax.
+NOTE: Asciidoctor是为了直接替换原 AsciiDoc Python 处理器（`asciidoc.py`）。
+Asciidoctor 测试套件含有 {uri-tests}[> 1,600 测试用例] 来确保和 AsciiDoc 语法的兼容性。
 
-In addition to the classic AsciiDoc syntax, Asciidoctor recognizes additional markup and formatting options, such as font-based icons (e.g., `+icon:fire[]+`) and UI elements (e.g., `+button:[Save]+`).
-Asciidoctor also offers a modern, responsive theme based on {uri-foundation}[Foundation] to style the HTML5 output.
+除了经典的 AsciiDoc 语法，Asciidoctor 还添加额外的标记和格式设置选项，例如 font-based 图标（例如： `+icon:fire[]+`）和 UI 元素（例如： `+button:[Save]+`）。
+Asciidoctor 还提供了一个基于 {uri-foundation}[Foundation] 的现代的、响应式主题来美化 HTML5 输出。
 
-== Requirements
+[[requirements]]
+== 要求
 
-Asciidoctor works on Linux, OS X (aka Mac OS X) and Windows and requires one of the following implementations of {uri-ruby}[Ruby]:
+Asciidoctor 可以在 Linux，OSX (Mac) 和 Windows，并且需要下面其中一个 {uri-ruby}[Ruby] 实现：
 
 * MRI (Ruby 1.8.7, 1.9.3, 2.0, 2.1, 2.2 & 2.3)
 * JRuby (1.7 in Ruby 1.8 and 1.9 modes, 9000)
 * Rubinius 2.2.x
 * Opal (JavaScript)
 
-We welcome your help testing Asciidoctor on these and other platforms.
-Refer to <<{idprefix}contributing,Contributing>> to learn how to get involved.
+我们欢迎你来帮助在这些以及其他平台测试 Asciidoctor。
+参考 <<{idprefix}contributing,Contributing>> 来学习如何参与进来。
 
 [CAUTION]
 ====
-If you're using a non-English Windows environment, you may bump into an `Encoding::UndefinedConversionError` when invoking Asciidoctor.
-To solve this issue, we recommend changing the active code page in your console to UTF-8:
+如果你使用一个非英语的 Windows 环境，当调用 Asciidoctor 时，可能会碰到 `Encoding::UndefinedConversionError` 错误。
+为了解决这个问题，我们建议将控制台的编码更改为 UTF-8：
 
  chcp 65001
 
-Once you make this change, all your Unicode headaches will be behind you.
-Asciidoctor works best when you use UTF-8 everywhere.
+一旦你做了这个改变，所有的编码问题，都将迎刃而解。
+只要你在任何地方都是 UTF-8，Asciidoctor 总会工作地很好。
 ====
 
-== Installation
+[[installation]]
+== 安装
 
-Asciidoctor can be installed using (a) the `gem install` command, (b) Bundler or (c) package managers for popular Linux distributions.
+Asciidoctor 可以通过三种方式安装：（a） 使用 `gem install` 命令；（b） 使用 Bundler；（c） 流行的 Linux 发行版的包管理器
 
-TIP: The benefit of using a Linux package manager to install the gem is that it handles installing Ruby and the RubyGems library if those packages are not already installed on your machine.
-The drawback is that the package may not be available immediately after the release of the gem.
-If you need the latest version, you can always fallback to using the `gem` command.
+TIP: 使用 Linux 包管理器安装的好处是如果 Ruby 和 RubyGems 库没有在你的机器上安装，它会一并安装上去。
+不利的是在 gem 发布之后，这类安装包并不是立即可用。
+如果你需要最新版，你应该总是优先使用 `gem` 命令安装。
 
-=== (a) gem install
+[[a-gem-install]]
+=== (a) gem 安装
 
-Open a terminal and type (excluding the leading `$`):
+打开一个终端输入如下命令（不含开头的 `$`）：
 
  $ gem install asciidoctor
 
-If you want to install a pre-release version (e.g., a release candidate), use:
+如果想安装一个预览版（比如：候选发布版），请使用：
 
  $ gem install asciidoctor --pre
 
-.Upgrading your installation
+.升级
 [TIP]
 ====
-If you have an earlier version of Asciidoctor installed, you can update it using:
+如果你安装有一个旧版本的 Asciidoctor，你可以使用下面的命令来升级：
 
  $ gem update asciidoctor
 
-If you install a new version of the gem using `gem install` instead of gem update, you'll have multiple versions installed.
-If that's the case, use the following gem command to remove the old versions:
+如果使用 `gem install` 命令来安装一个新版本的 gem 来代替升级，则会安装多个版本。
+如果是这种情况，使用下面的 gem 命令来移除旧版本：
 
  $ gem cleanup asciidoctor
 ====
 
+[[b-bundler]]
 === (b) Bundler
 
-. Create a Gemfile in the root folder of your project (or the current directory)
-. Add the `asciidoctor` gem to your Gemfile as follows:
+. 在项目的根目录（或者当前路径），创建一个 `Gemfile` 文件；
+. 在这个文件中添加 `asciidoctor` gem 如下：
 +
 [source]
 ----
 source 'https://rubygems.org'
 gem 'asciidoctor'
-# or specify the version explicitly
+# 或者明确指明版本
 # gem 'asciidoctor', '1.5.4'
 ----
 
-. Save the Gemfile
-. Open a terminal and install the gem using:
+. 保存 `Gemfile` 文件
+. 打开终端，使用如下命令安装 gem：
 
  $ bundle
 
-To upgrade the gem, specify the new version in the Gemfile and run `bundle` again.
-Using `bundle update` is *not* recommended as it will also update other gems, which may not be the desired result.
+要升级 gem 的话，在 `Gemfile` 文件中，指明新版本，然后再次运行 `bundle` 即可。
+*不推荐* 直接使用 `bundle update` 命令，因为它还会升级其他 gem，也许会造成不可预料的结果。
 
-=== (c) Linux package managers
+[[c-linux-package-managers]]
+=== (c) Linux 包管理
 
-==== DNF (Fedora 21 or greater)
+[[dnf-fedora-21-or-greater]]
+==== DNF (Fedora 21 或更高版本)
 
-To install the gem on Fedora 21 or greater using dnf, open a terminal and type:
+在 Fedora 21 或更高版本中安装这个 gem，可以使用 dnf。打开终端并输入如下命令：
 
  $ sudo dnf install -y asciidoctor
 
-To upgrade the gem, use:
+升级则使用：
 
  $ sudo dnf update -y asciidoctor
 
-TIP: Your Fedora system may be configured to automatically update packages, in which case no action is required by you to update the gem.
+TIP: 如果你的 Fedora 系统配置的是自动升级包，在这种情况下，不需要你亲自动手升级。
 
-==== apt-get (Debian Sid, Ubuntu Saucy or greater, Mint)
+[[apt-get-debian-sid-ubuntu-saucy-or-greater-mint]]
+==== apt-get (Debian Sid, Ubuntu Saucy 或者更高版本, Mint)
 
-To install the gem on Debian, Ubuntu or Mint, open a terminal and type:
+在 Debian，Ubuntu 或 Mint 中安装这个 gem，请打开终端并输入如下命令：
 
  $ sudo apt-get install -y asciidoctor
 
-To upgrade the gem, use:
+升级则使用：
 
  $ sudo apt-get upgrade -y asciidoctor
 
-TIP: Your Debian or Ubuntu system may be configured to automatically update packages, in which case no action is required by you to update the gem.
+TIP: 如果你的 Debian 或 Ubuntu 系统配置的是自动升级包，在这种情况下，不需要你亲自动手升级。
 
+[[apk-alpine-linux]]
 ==== apk (Alpine Linux)
 
-To install the gem on Alpine Linux, open a terminal and type:
+在 Alpine Linux 中安装这个 gem，请打开终端并输入如下命令：
 
  $ sudo apk add asciidoctor
 
-To upgrade the gem, use:
+升级则使用：
 
  $ sudo apk add -u asciidoctor
 
-TIP: Your Alpine Linux system may be configured to automatically update packages, in which case no action is required by you to update the gem.
+TIP: 如果你的 Alpine Linux 系统配置的是自动升级包，在这种情况下，不需要你亲自动手升级。
 
-=== Other installation options
+[[other-installation-options]]
+=== 其他安装选项
 
-* {uri-install-docker}[Installing Asciidoctor using Docker]
-* {uri-install-osx-doc}[Installing Asciidoctor on OS X]
+* {uri-install-docker}[使用 Docker 安装 Asciidoctor ]
+* {uri-install-osx-doc}[在 Mac OS X 安装 Asciidoctor ]
 // at the moment, the following entry is just a reiteration of the information in this README
-//* {uri-install-doc}[Installing the Asciidoctor toolchain]
+//* {uri-install-doc}[安装 Asciidoctor 工具链]
 
-== Usage
+[[usage]]
+== 使用
 
-If the Asciidoctor gem installed successfully, the `asciidoctor` command line interface (CLI) will be available on your PATH.
-To verify it's available, run the following in your terminal:
+如果成功安装 Asciidoctor，则在可执行程序路径中，`asciidoctor` 就可用了。
+为了验证它的可用性，你可以在终端中执行如下命令：
 
  $ asciidoctor --version
 
-You should see information about the Asciidoctor version and your Ruby environment printed in the terminal.
+你应该看到关于 Asciidoctor 和 Ruby 环境信息将打印到你的终端上。
 
 [.output]
 ....
@@ -233,50 +245,52 @@ Asciidoctor 1.5.4 [http://asciidoctor.org]
 Runtime Environment (ruby 2.2.2p95 [x86_64-linux]) (lc:UTF-8 fs:UTF-8 in:- ex:UTF-8)
 ....
 
-Asciidoctor also provides an API.
-The API is intended for integration with other Ruby software, such as Rails, Sinatra and GitHub, and other languages, such as Java (via {uri-asciidoctorj}[AsciidoctorJ]) and JavaScript (via {uri-asciidoctorjs}[Asciidoctor.js]).
+Asciidoctor 还提供了一套 API。
+这套 API 是为了整合其他的 Ruby 软件，例如 Rails、Sinatra、Github，甚至其他语言，比如 Java （通过 {uri-asciidoctorj}[AsciidoctorJ]） 和 JavaScript （通过 {uri-asciidoctorjs}[Asciidoctor.js]）。
 
-=== Command line interface (CLI)
+[[command-line-interface-cli]]
+=== 命令行（CLI）
 
-The `asciidoctor` command allows you to invoke Asciidoctor from the command line (i.e., a terminal).
+`asciidoctor` 命令可以让你通过命令行（比如：终端）来调用 Asciidoctor。
 
-The following command converts the file README.adoc to HTML and saves the result to the file README.html in the same directory.
-The name of the generated HTML file is derived from the source file by changing its file extension to `.html`.
+下面的命令将 README.adoc 文件转化为 HTML，并且保存到同一目录下的 README.html 文件中。
+生成的 HTML 文件名源自源文件名，只是将其扩展名改为了 `.html`。
 
  $ asciidoctor README.adoc
 
-You can control the Asciidoctor processor by adding various flags and switches, which you can learn about using:
+您可以通过添加各种标志和开关控制 Asciidoctor 处理器，通过下面的命令你可以学习它的更多用法：
 
  $ asciidoctor --help
 
-For instance, to write the file to a different directory, use:
+比如，将文件写入到不同路径里，使用如下命令：
 
  $ asciidoctor -D output README.adoc
 
-The `asciidoctor` {uri-manpage}[man page] provides a complete reference of the command line interface.
+`asciidoctor` {uri-manpage}[帮助页面] 提供了这个命令的完整参考。
 
-Refer to the following resources to learn more about how to use the `asciidoctor` command.
+点击下面的资源，学习更多关于 `asciidoctor` 命令的用法。
 
-* {uri-render-doc}[How do I convert a document?]
-* {uri-themes-doc}[How do I use the Asciidoctor stylesheet factory to produce custom themes?]
+* {uri-render-doc}[如何转化文档？]
+* {uri-themes-doc}[如何使用 Asciidoctor 样式工厂来创建自定义主题？]
 
+[[ruby-api]]
 === Ruby API
 
-To use Asciidoctor in your application, you first need to require the gem:
+为了在你应用中使用 Asciidoctor，首先需要引入这个 gem：
 
 [source]
 require 'asciidoctor'
 
-You can then convert an AsciiDoc source file to an HTML file using:
+然后，你可以通过下面的代码将 AsciiDoc 源文件转化成一个 HTML 文件：
 
 [source]
 Asciidoctor.convert_file 'README.adoc', to_file: true, safe: :safe
 
-WARNING: When using Asciidoctor via the API, the default safe mode is `:secure`.
-In secure mode, several core features are disabled, including the `include` directive.
-If you want to enable these features, you'll need to explicitly set the safe mode to `:server` (recommended) or `:safe`.
+WARNING: 当你通过 API 使用 Asciidoctor 时，默认的安全模式是 `:secure`。
+在 secure 模式下，很多核心特性将不可用，包括 `include` 特性。
+如果你想启用这些特性，你需要明确设置安全模式为 `:server` （推荐）或 `:safe`。
 
-You can also convert an AsciiDoc string to embeddable HTML (for inserting in an HTML page) using:
+你也可以将 AsciiDoc 字符串转化我内嵌的 HTML （为了插入到一个 HTML 页面），用法如下：
 
 [source]
 ----
@@ -284,7 +298,7 @@ content = '_Zen_ in the art of writing http://asciidoctor.org[AsciiDoc].'
 Asciidoctor.convert content, safe: :safe
 ----
 
-If you want the full HTML document, enable the `header_footer` option as follows:
+如果你想得到完整的 HTML 文档，只需要启用 `header_footer` 选项即可。如下：
 
 [source]
 ----
@@ -292,7 +306,7 @@ content = '_Zen_ in the art of writing http://asciidoctor.org[AsciiDoc].'
 html = Asciidoctor.convert content, header_footer: true, safe: :safe
 ----
 
-If you need access to the parsed document, you can split the conversion into discrete steps:
+如果你想访问已经处理过的文档，可以将转化过程拆分成离散的几步：
 
 [source]
 ----
@@ -302,48 +316,51 @@ puts document.doctitle
 html = document.convert
 ----
 
-Keep in mind that if you don't like the output Asciidoctor produces, _you can change it!_
-Asciidoctor supports custom converters that can handle converting from the parsed document to the generated output.
+请注意：如果你不喜欢 Asciidoctor 输出结果，_你完全可以改变它。_
+Asciidoctor 支持自定义转化器，它可以操作从待处理文件到生成文档整个环节。
 
-One easy way to customize the output piecemeal is by using the template converter.
-The template converter allows you to supply a {uri-tilt}[Tilt]-supported template file to handle converting any node in the document.
+一个简单的、细微地自定义输出的方式是使用模板转化器。
+模板转化器运行你提供一个 {uri-tilt}[Tilt] 模板，这样通过模板文件来操作转化出的文档的每个节点。
 
-However you go about it, you _can_ have 100% control over the output.
-For more information about how to use the API or to customize the output, refer to the {uri-user-manual}[user manual].
+这样，你就 _可以_ 百分之百地控制你的输出。
+关于更多关于 API 或自定义输出信息，请参考 {uri-user-manual}[用户帮助手册]。
 
-== Contributing
+[[contributing]]
+== 贡献
 
-In the spirit of {uri-freesoftware}[free software], _everyone_ is encouraged to help improve this project.
-If you discover errors or omissions in the source code, documentation, or website content, please don't hesitate to submit an issue or open a pull request with a fix.
-New contributors are always welcome!
+自由软件的精神鼓励 _每个人_ 来帮助改善这个项目。
+如果你在源码、文档或网站内容中发现错误或漏洞，请不要犹豫，提交一个议题或者推送一个修复请求。
+随时欢迎新的贡献者！
 
-Here are some ways *you* can contribute:
 
-* by using prerelease (alpha, beta or preview) versions
-* by reporting bugs
-* by suggesting new features
-* by writing or editing documentation
-* by writing specifications
-* by writing code -- _No patch is too small._
-** fix typos
-** add comments
-** clean up inconsistent whitespace
-** write tests!
-* by refactoring code
-* by fixing {uri-issues}[issues]
-* by reviewing patches
+这里有几种 *你* 可以做出贡献的方式：
 
-The {uri-contribute}[Contributing] guide provides information on how to create, style, and submit issues, feature requests, code, and documentation to the Asciidoctor Project.
+* 使用预发布版本（alpha, beta 或 preview）
+* 报告 Bug
+* 提议新功能
+* 编写文档
+* 编写规范
+* 编写 -- _任何补丁都不小。_
+** 修正错别字
+** 添加评论
+** 清理多余空白
+** 编写测试！
+* 重构代码
+* 修复 {uri-issues}[议题]
+* 审查补丁
 
-== Getting Help
+{uri-contribute}[贡献] 指南提供了如何提供贡献，包括如何创建、修饰和提交问题、特性、需求、代码和文档给 Asciidoctor 项目。
 
-The Asciidoctor project is developed to help you easily write and publish your content.
-But we can't do it without your feedback!
-We encourage you to ask questions and discuss any aspects of the project on the discussion list, on Twitter or in the chat room.
+[[getting-help]]
+== 获得帮助
 
-Discussion list (Nabble):: {uri-discuss}
-Twitter:: #asciidoctor hashtag or @asciidoctor mention
-Chat (Gitter):: image:https://badges.gitter.im/Join%20In.svg[Gitter, link=https://gitter.im/asciidoctor/asciidoctor]
+开发 Asciidoctor 项目是未来了帮助你更容易地书写和发布你的内容。
+但是，如果没有反馈，我们将寸步难行。
+我们鼓励你在讨论组、Twitter或聊天室里，提问为题，讨论项目的方方面面，
+
+讨论组 (Nabble):: {uri-discuss}
+Twitter:: #asciidoctor 井号或 @asciidoctor 提醒
+聊天 (Gitter):: image:https://badges.gitter.im/Join%20In.svg[Gitter, link=https://gitter.im/asciidoctor/asciidoctor]
 ////
 Chat (IRC):: {uri-irc}[#asciidoctor] on FreeNode IRC
 ////
@@ -354,22 +371,24 @@ Further information and documentation about Asciidoctor can be found on the proj
 {uri-project}/[Home] | {uri-news}[News] | {uri-docs}[Docs]
 endif::[]
 
-The Asciidoctor organization on GitHub hosts the project's source code, issue tracker, and sub-projects.
+Asciidoctor 组织在 Github 托管代码、议案跟踪和相关子项目。
 
-Source repository (git):: {uri-repo}
-Issue tracker:: {uri-issues}
-Asciidoctor organization on GitHub:: {uri-org}
+代码库 (git):: {uri-repo}
+议案跟踪:: {uri-issues}
+在 GitHub 的 Asciidoctor 组织:: {uri-org}
 
-== Copyright and Licensing
+[[copyright-and-licensing]]
+== 版权和协议
 
 Copyright (C) 2012-2016 Dan Allen, Ryan Waldron and the Asciidoctor Project.
-Free use of this software is granted under the terms of the MIT License.
+这个软件的免费使用是在MIT许可条款授予的。
 
-See the {uri-license}[LICENSE] file for details.
+请看 {uri-license}[版权声明] 文件来获取更多详细信息。
 
-== Authors
+[[authors]]
+== 作者
 
-*Asciidoctor* is led by https://github.com/mojavelinux[Dan Allen] and https://github.com/graphitefriction[Sarah White] and has received contributions from {uri-contributors}[many other individuals] in Asciidoctor's awesome community.
-The project was initiated in 2012 by https://github.com/erebor[Ryan Waldron] and based on {uri-prototype}[a prototype] written by https://github.com/nickh[Nick Hengeveld].
+*Asciidoctor* 由 https://github.com/mojavelinux[Dan Allen] 和 https://github.com/graphitefriction[Sarah White] 领导，并从 Asciidoctor 社区的 {uri-contributors}[很多其他独立开发者] 上收到了很多贡献。
+项目最初由 https://github.com/erebor[Ryan Waldron] 于 2012年基于 https://github.com/nickh[Nick Hengeveld] 的 {uri-prototype}[原型] 创建。
 
-*AsciiDoc* was started by Stuart Rackham and has received contributions from many other individuals in the AsciiDoc community.
+*AsciiDoc* 由 Stuart Rackham 启动，并从 AsciiDoc 社区的其他独立开发者上收到很多贡献。
