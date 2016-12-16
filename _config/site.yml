@@ -1,5 +1,5 @@
 title: Asciidoctor
-description: An open source implementation of AsciiDoc in Ruby
+description: AsciiDoc 的开源 Ruby 实现版
 author: Asciidoctor Project
 blog_path: /news
 # FIXME timezone will need to be specified per post for a global team
@@ -37,22 +37,6 @@ profiles:
   staging:
     deploy: null
   production:
-    base_url: http://asciidoctor.org
-    disqus_developer: false
-    # long-hand form for Asciidoctor
-    google_analytics_account: UA-38215684-1
-    google_analytics:
-      account: UA-38215684-1
-    scss:
-      :line_numbers: false
-      :style: :compressed
-    #compass_output_style: compressed
-    # TODO enable minify once we verify it's working as expected
-    #minify: true
-    deploy:
-      host: github_pages
-      branch: gh-pages
-  zh_prod:
     base_url: http://asciidoctor.cn
     disqus_developer: false
     # long-hand form for Asciidoctor
@@ -66,6 +50,5 @@ profiles:
     # TODO enable minify once we verify it's working as expected
     #minify: true
     deploy:
-      host: asciidoctor.cn
-      username: deployer
+      host: deployer@asciidoctor.cn
       path: /home/deployer/asciidoctor.cn/html
